@@ -1,6 +1,8 @@
 # Hello, World
 
-Trang HTML tĩnh: mở `index.html` trên trình duyệt.
+Trang HTML tĩnh, deploy trên GitHub Pages.
+
+**Site:** https://adathecoder-svg.github.io/html-hello-world/
 
 ## Files
 
@@ -8,10 +10,4 @@ Trang HTML tĩnh: mở `index.html` trên trình duyệt.
 - `styles.css` — giao diện
 - `script.js` — nút **Say hello**
 
-## Chạy local
-
-Mở `index.html` trực tiếp, hoặc:
-
-```bash
-python3 -m http.server 8080
-```
+Mỗi lần push lên `main`, GitHub Actions deploy lại site.

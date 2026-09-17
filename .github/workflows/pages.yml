@@ -24,19 +24,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Enable GitHub Pages (Actions)
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh api --method POST repos/${{ github.repository }}/pages --input - <<'JSON' || true
-          {"build_type": "workflow"}
-          JSON
-          gh api --method PUT repos/${{ github.repository }}/pages --input - <<'JSON' || true
-          {"build_type": "workflow"}
-          JSON
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Stage site files
         run: |
